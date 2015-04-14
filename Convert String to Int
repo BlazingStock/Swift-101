@@ -1,0 +1,26 @@
+
+
+
+
+// Convert String to an Int
+
+var stringInt:NSString = "42"       // 👈 Notice how it's of type, NSString instead of the normal String
+var stringToInt:Int = Int(stringInt.doubleValue)
+var stringToDouble:Double = stringInt.doubleValue
+
+
+// var intToString = String(stringInterpolationSegment:intInt)
+
+let cannotBeNegative:UInt8 = 8  // 👈 Get the error code "integer literal overflows when stored into uint8" when assigning a negative value to cannotBeNegative
+
+
+var notInt = 45.39393939488e2
+var dubToInt = Int(notInt)      // Notice how the decimal gets truncated
+
+
+
+
+// Convert String to an Int
+var newStringInt:String = "240"
+var newStringtoInt = newStringInt.toInt()
+var newStringtoInt2:Int? = newStringInt.toInt()     // notice the optional Int Type

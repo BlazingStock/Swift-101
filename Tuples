@@ -1,4 +1,48 @@
 
+// Tuples - useful for temporary groups of related values
+
+
+var oldTuple = ("Hi", 240, false, 45.693993e2, "Comment ca vas")
+oldTuple.4
+oldTuple.1
+
+var newTuple = (dogOwner: false, hasKids: false, age: 28, married:false, nickname:nickName)
+newTuple.nickname
+newTuple.married                // Notice how this is being called using the option of the variable newTuple
+newTuple.hasKids
+
+
+let (dogOwner1, hasKids1, age1, married1, nickname1) = newTuple       // I've decomposed the value of newTuple into constanst
+dogOwner1
+hasKids1                        // Notice how this is now being called using the constant name instead of the option of the variable newTuple as done above
+nickname1
+
+
+// let (dogOwner2, _) = newTuple   // This will return an error because all of the values of newTuple haven't been decomposed or ignored w/ the _
+
+let (dogOwner2, _, _, age2, _) = newTuple   // This works, as opposed to the above line because i ignored parts of the tuple
+dogOwner2
+age2
+
+
+let http404Error = (404, "Webpage Not Found")
+let (http404, httpPageNotFound) = http404Error
+http404
+
+var (testTuple, testTuple2) = http404Error
+testTuple
+testTuple2
+http404
+httpPageNotFound
+
+
+
+
+
+// #####################################=================================================###################################
+// #####################################=================================================###################################
+// #####################################=================================================###################################
+
 
 
 
@@ -9,7 +53,7 @@ let http404Error = (404, "Webpage not Found", 40.44544344355, false, "Will this 
 
 http404Error
 
-http404Error.0                          // use .# to access indivitual elements of http404Error, which is a tuple
+http404Error.0                          // use .# to access individual elements of http404Error, which is a tuple
 http404Error.1
 http404Error.2
 http404Error.3
@@ -25,7 +69,7 @@ aAt
 
 
 
-let http200Error = (codeOne: 200, description: "d'accord")              // 👈 in this tuple, i named the indivitual elements while defining the tuple. Which i did not do when defining the very first tuple
+let http200Error = (codeOne: 200, description: "d'accord")              // 👈 in this tuple, i named the individual elements while defining the tuple. Which i did not do when defining the very first tuple
 
 // http200Error.                    // because i named the elements during the defining stage, the '.' returns names instead of numbers for each element.  I can use the element names to access the values of those elements.
 
@@ -62,7 +106,7 @@ if let newPossibilities2 = newPossibilities{                        // "if let" 
 
 
 
-// let surverAnswer:String?         notice how "let" will not work
+// let surveyAnswer:String?         notice how "let" will not work
 var serverAnswer:String?            // String? sets this variable to be an optional
 
 // Unlike in Objective-C, nil is not a pointer—it is the absence of a value of a certain type. Optionals of any type can be set to nil, not just object types.
@@ -77,23 +121,8 @@ if (optionalStr != nil) {
 }
 
 
-serverAnswer
 surveyAnswer
-
-
-
-
-
-
-
-// #####################################=================================================###################################
-// #####################################=================================================###################################
-// #####################################=================================================###################################
-
-// #####################################=================================================###################################
-// #####################################=================================================###################################
-// #####################################=================================================###################################
-
+surveyAnswer
 
 
 
