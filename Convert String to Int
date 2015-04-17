@@ -24,3 +24,6 @@ var dubToInt = Int(notInt)      // Notice how the decimal gets truncated
 var newStringInt:String = "240"
 var newStringtoInt = newStringInt.toInt()
 var newStringtoInt2:Int? = newStringInt.toInt()     // notice the optional Int Type
+
+var stringString = "HelloWorld"
+var stringInttt = stringString.toInt()  // 👈 This will return a nil value

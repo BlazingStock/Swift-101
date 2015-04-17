@@ -1,0 +1,52 @@
+“You can rewrite the possibleNumber example from the Optionals section to use optional binding rather than forced unwrapping:
+
+​if​ ​let​ ​actualNumber​ = ​possibleNumber​.​toInt​() {
+​    ​println​(​"\'​\(​possibleNumber​)​\' has an integer value of ​\(​actualNumber​)​"​)
+​} ​else​ {
+​    ​println​(​"\'​\(​possibleNumber​)​\' could not be converted to an integer"​)
+​}
+​// prints "'123' has an integer value of 123"
+
+“This code can be read as:
+
+“If the optional Int returned by possibleNumber.toInt contains a value, set a new constant called actualNumber to the value contained in the optional.”
+
+If the conversion is successful, the actualNumber constant becomes available for use within the first branch of the if statement. It has already been initialized with the value contained within the optional, and so there is no need to use the ! suffix to access its value. In this example, actualNumber is simply used to print the result of the conversion.
+
+You can use both constants and variables with optional binding. If you wanted to manipulate the value of actualNumber within the first branch of the if statement, you could write if var actualNumber instead, and the value contained within the optional would be made available as a variable rather than a constant."
+
+
+
+
+
+
+
+
+// Optional Binding - “You use optional binding to find out whether an optional contains a value, and if so, to make that value available as a temporary constant or variable.”
+
+var possibleNumber:String? = "504"
+var actualNumber:Int? = possibleNumber!.toInt()
+
+if actualNumber != nil {
+    var normalValue = actualNumber! + 504
+} else {
+    println("Nothing to see here")
+}
+
+
+
+if let oldNormalValue = actualNumber {
+    var normalValue = actualNumber! + 504
+} else {
+    println("Nothing to see here")
+}
+
+
+
+var normalValue:String? = nil
+
+if let newOptionalConstant = possibleNumber?.toInt() {
+    println("\(normalValue) has an integer value of \(newOptionalConstant)")
+} else {
+    println("\(normalValue) could not be converted")
+}
