@@ -169,3 +169,86 @@ var testArray2 = fourArray + fourArray           // new array's type is inferred
 
 
 // What would be a real life app scenario for using an array?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Arrays
+
+// Create an empty array
+
+var emptyArray = [String]()
+emptyArray[0] = "Janet"
+emptyArray
+
+if emptyArray.isEmpty {
+    println("Nothing to see here")
+}else{
+    println("The value is ... ")
+}
+
+
+var emptyArray2 = [String]()
+emptyArray2.append("String")
+println(emptyArray2.count)
+emptyArray2.removeAll(keepCapacity: false)
+
+
+var topThreePlayers = ["Lebron James", "Kevin Durant", "Stephan Curry"]
+let numberOfTeams = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+let teamNames = ["Miami Heat", "Washington Wizards", "Miami Dophins", "Grenadian Seahawks", "Barcelona", "AC Milan", "NY Yankees", "The Knickerbockers", "The Thunder", "GlobeTrotters", "Syracuse Orange", "Bloody Marries", "Fully Liquid", "Fully Loaded", "Pirus", "Crips"]
+teamNames.count
+
+var playersPerTeam = 16
+
+numberOfTeams.count
+numberOfTeams.capacity
+
+var teamZero = numberOfTeams[0]
+var teamOne = numberOfTeams[1]
+var teamOneName = "\(numberOfTeams[1]) Heat"
+
+
+for team in teamNames{
+println(team)
+}
+
+println("Hello, world!")
+
+
+
+
+
+
+
+
+// New Array examples
+
+var shoppingList = ["Sugar", "Flour"]
+println("The shopping list contains \(shoppingList.count) items.")
+
+shoppingList.append("Yeast")    // adds to the end of the list
+shoppingList.insert("Test", atIndex: 1)
+shoppingList += ["Baking Powder"]   // 👈 same function as above
+shoppingList [2...4] = ["Bananas", "Chocolate Pudding"]
+
+for item in shoppingList {
+    println(item)
+}
+
+
+
+
+var new = "new"
+new
